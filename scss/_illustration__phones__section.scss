@@ -1,0 +1,72 @@
+.illustration__phones__section{
+	background-image: url("../images/bg-pattern-circles.svg"),linear-gradient(to right,#393a56,#393a56);
+	background-repeat: no-repeat;
+	background-size: 160%;
+	background-position: -127px -217px;
+	background-color: #393a56;
+	border-top-right-radius:88px ;
+	border-bottom-left-radius: 88px;
+	height: 650px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+	margin-bottom: 50px;
+	@include breakpoint-up(medium){
+			height: 300px;
+			margin-bottom: 300px;
+	}
+	& .img{
+			width: 376px;
+			height: 367px;
+			position: absolute;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			left: -4px;
+			top: -166px;
+			background-image: url("../images/illustration-phones.svg");
+			@include breakpoint-up(medium){
+					width: 435px;
+					height: 461px;
+					left: 30px;
+					top: -70px;
+			}
+	}
+	& .sotai__text{
+			@include breakpoint-up(medium){
+					width: fit-content;
+			}
+			& h1{
+					text-align: center;
+					color: $White;
+					font-size: 40px;
+					font-weight: 100;
+					line-height: 1.3;
+					margin-top: 180px;
+					@include breakpoint-up(medium){
+							margin:0px ;
+							font-size: 30px;
+							width: 100%;
+							margin-left: 135px;
+					}
+			}
+			& p{
+					color: $White;
+					text-align: center;
+					font-weight: 100;
+					line-height: 1.9;
+					margin: 1px 20px;
+					@include breakpoint-up(medium){
+							margin: 0px;
+							font-size: 15px;
+							text-align: left;
+							margin-left: 540px;
+					
+					}
+
+
+			}
+	}
+
+}

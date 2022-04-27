@@ -1,0 +1,48 @@
+* , *::after , *::before{
+	box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Overpass', sans-serif;
+	// font-family: 'Ubuntu', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	margin-left:1.4625rem;
+	margin-right: 1.4625rem;
+	@include breakpoint-up(large){
+		margin-left: 75px;
+		margin-right: 75px;
+	}
+}
+
+.fccr{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.fccc{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.fcspr{
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+
+.closed {
+	visibility: hidden;
+}

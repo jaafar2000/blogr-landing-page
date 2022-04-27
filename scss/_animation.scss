@@ -1,0 +1,110 @@
+@keyframes fade_in {
+	from{
+			visibility: hidden;
+			opacity: 0;
+	}
+	to{
+			visibility: visible;
+			opacity: 1;
+	}
+	
+}
+@keyframes fade_out {
+	from{
+			visibility: visible;
+			opacity: 1;
+	}
+	to{
+			visibility: hidden;
+			opacity: 0;
+
+	}
+	
+}
+.fadeOut{
+	animation: fade_in 300ms ease-in-out forwards;   
+	transform-origin: center center ; 
+}
+.fadeIn{
+	animation: fade_out 300ms ease-in-out forwards;
+}
+
+
+
+
+@keyframes up {
+	from{
+			transform: rotate(0deg);
+	}
+	to{
+transform: rotate(180deg);
+
+	}
+	
+}
+@keyframes down {
+	from{
+			transform: rotate(180deg);
+	}
+	to{  
+			transform: rotate(360deg);
+
+	}
+	
+}
+
+.spinDown{
+	animation: down ease-in-out 300ms forwards;
+}
+.spinUp{
+	animation: up ease-in-out 300ms forwards;
+}
+
+
+
+
+@keyframes show {
+	0%{
+			overflow: hidden;
+			height: 0px;
+			opacity: 0;
+	}
+	99%{
+				height: 150px;
+				opacity: 0.4;
+	}
+	100%{
+			height: fit-content;
+			overflow:visible;
+			opacity: 1;
+			
+	}
+
+}
+
+
+@keyframes hidel {
+	0%{
+			overflow: visible;
+			height: fit-content;
+			opacity: 1;
+	}
+	1%{
+			height: 150px;
+	}
+	100%{
+			height: 0;
+			overflow:hidden;
+			opacity: 0;
+	}
+}
+
+
+
+.showList{
+	animation: show 300ms forwards ease-in-out ;
+}
+
+.hideList{
+	animation: hidel 300ms forwards ease-in-out ;
+}

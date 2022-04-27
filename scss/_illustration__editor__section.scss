@@ -1,0 +1,81 @@
+._illustration__editor__section{
+	margin-bottom: 300px;
+	@include breakpoint-up(medium){
+		margin-bottom: 300px;
+	}
+& .title{
+	& h1{
+			text-align: center;
+			color: $Very--dark--blue;
+			margin-top: 80px;
+			margin-bottom: 60px;
+
+	}
+}
+
+& .container{
+	@include breakpoint-up(medium){
+		position: relative;
+		margin-right: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+		//cont
+		& .img{
+				width: 100%;
+				height: 400px;
+				background-image: url("../images/illustration-editor-mobile.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 124%;
+				@include breakpoint-up(medium){
+					background-image: url("../images/illustration-editor-desktop.svg");
+					background-repeat: no-repeat;
+					background-size: 131%;
+					height: 800px;
+					background-position: 17px;
+					position: absolute;
+					right: 0px;
+					order: 2;
+					width: 50%;
+				}
+		}
+		& .inf{
+			@include breakpoint-up(medium){
+				display: flex;
+				align-items: flex-start;
+				width: 85%;
+				justify-content: flex-start;
+			}
+		& .info__1,
+		& .info__2{
+			@include breakpoint-up(medium){
+				width: 50%;
+			}
+				& h1{
+						text-align: center;
+						color: $Very--dark--blue;
+						@include breakpoint-up(medium){
+							text-align: left;
+							font-size: 20px;
+						}
+				}
+				& p{
+						color: $Very--dark--grayish--blue;
+						line-height: 1.7;
+						margin: 0px 10px;
+						font-size: 20px;
+						text-align: center;
+						margin-bottom: 20px;
+						@include breakpoint-up(medium){
+							text-align: left;
+							font-size: 15px;
+						}
+				}
+		}
+	}
+}
+}

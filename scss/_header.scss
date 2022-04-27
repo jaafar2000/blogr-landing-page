@@ -1,0 +1,289 @@
+header{
+	height: 600px;
+	background-image:url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(to bottom,#ff8870,#ff4759);
+	background-repeat: no-repeat;
+	width: 100%;
+	background-position: 40% 40%;
+	border-bottom-left-radius: 88px;
+  background-size: 400%;
+	@include breakpoint-up(medium){
+		height: 80vh;
+		background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, #ff8870, #fd1f34);
+		background-size: cover;
+		background-size: 264%;
+		background-position: 33% 49%;
+		margin-bottom: 200px;
+	}
+
+    & .arrow{
+		width: 11px;
+		height: 7px;
+		background-image: url("../images/icon-arrow-dark.svg");
+		background-repeat: no-repeat;
+		position: absolute;
+		right: -20px;
+		bottom: 9px;
+		transition: 300ms;
+		transform-origin: center ;
+		@include breakpoint-up(medium){
+			background-image: url("../images/icon-arrow-light.svg");
+			bottom: 4px;
+		}
+		
+	}
+	& nav{
+		padding-top:56px;
+		position: relative;
+		@include breakpoint-up(medium){
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+		}
+		& .logo{
+			& img{
+                width: 77px;
+			}
+			
+		}
+		.open{
+			background-image: url("../images/icon-hamburger.svg");
+		}
+		.close{
+			background-image: url("../images/icon-close.svg");
+		}
+		& .hamburger{
+			width: 36px;
+			height: 19px;
+			background-repeat: no-repeat;
+			@include breakpoint-up(medium){
+				display: none;
+			}
+			width: 36px;
+			height: 19px;
+			background-repeat: no-repeat;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		& .header__main__links{
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 117px;
+			background-color:$White;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0px 20px 20px 2px #2525254d;
+			@include breakpoint-up(medium){
+				width: 85%;
+				box-shadow: none;
+				visibility: visible;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: row;
+				background-color: transparent;
+				top: 30px;
+				left: 54%;
+				text-align: center;
+				font-size: 15px;
+			}
+        & .main__ul{
+        width: 100;
+				text-align: center;
+				margin-bottom: 15px;
+				border-bottom: 1px solid #c3c0c04d;
+
+				@include breakpoint-up(medium){
+					// width: 200%;
+					width: fit-content;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					flex-direction: row;
+					background-color: transparent;
+					background-color: transparent;
+					border-bottom: none;
+
+				}
+
+				&  > li{
+            width: 100%;
+					padding: 5px 10px;
+					margin-bottom: 5px;
+					background-color: $White;
+					position: relative;
+					@include breakpoint-up(medium){
+						width: fit-content;
+						background-color: transparent;
+						color: $White;
+						margin-top: 20px;
+						margin-left: 30px;
+					}
+					& > a{
+						position: relative;
+						color:$Very--dark--blue;
+						font-weight: 600;
+						transition: 300ms;
+						font-size: 20px;
+						@include breakpoint-up(medium){
+							background-color: transparent;
+							color: $White;
+							font-size: 15px;
+							&:hover{
+								border-bottom: 1px solid $White;
+								color: $White !important;
+								transition: 300ms;
+							}
+							
+						}
+						&:hover{
+							cursor: pointer;
+							color: $Very--dark--grayish--blue;
+						}
+					}
+					& .inner__ul{
+						background-color: $ul__background;
+						width: 250px;
+						border-radius: 5px;
+						overflow: hidden;
+						height: 0px;
+						transition: 300px;
+						margin-top: 5px;
+						@include breakpoint-up(medium){
+							height: 0;
+							width: 100px;
+							position: absolute;
+							display: block;
+							overflow: hidden;
+							left: -16px;
+							margin-left: 20px;
+						}
+						& li{
+							background-color: $ul__background ;
+
+							& a{
+								color: $Very--dark--grayish--blue  ; 
+								font-size: 20px;
+								margin: 10px 0px;  
+								display: block;
+								font-weight: bold;
+								@include breakpoint-up(medium){
+									padding: 0px  20px;
+									font-size: 13px;
+								}
+
+								&:hover{
+									color: black;
+								}
+							}
+						}
+					
+					}
+
+
+
+				}
+
+			}
+			& .reg{
+				@include breakpoint-up(medium){
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					color: $White;
+				}
+				font-weight: bold;
+				& a:first-child{
+				padding: 10px 20px;
+				color: $Very--dark--black--blue;
+				margin-bottom: 10px;
+				transition: 300ms;
+				border-radius: 30px;
+				display: block;
+				@include breakpoint-up(medium){
+					color: $White;
+					margin: 0;
+					margin-right: 20px;
+				}
+				&:hover{
+					background-image: linear-gradient(to right ,$Very--light--red,$Light--red);
+					color: $White;
+				}
+				} 
+				& a:last-child{
+					padding: 10px 20px;
+					margin-bottom: 20px;
+					color: $White;
+					background-image: linear-gradient(to right ,$Very--light--red,$Light--red);
+					border-radius: 30px;
+					display: block;
+					@include breakpoint-up(medium){
+            margin-bottom: 0px;
+						background-color: $White;
+					}
+
+	            &:hover{
+					opacity: 0.7;
+				}
+				} 
+		    }
+		}
+				
+
+	}  
+
+
+
+	& .header__info{
+		text-align: center;
+		color: $White;
+		
+		margin-top: 51px;
+		& h1{
+			font-size: 32px;
+			line-height: 1.5;
+			width: 90%;
+			margin-top: 50px;
+			margin-bottom: 13px;
+			@include breakpoint-up(medium){
+				font-size: 45px;
+			}
+		}
+		& p{
+			font-size: 18px;
+			color: $Grayis--blue;
+			margin-bottom: 27px;
+		}
+		& .header__info__links{
+			margin-top: 20px;
+			& a{
+				margin-right: 20px;
+				padding: 13px;
+				border-radius: 40px;
+			    font-weight: bold;
+			}
+			& a:first-child{
+				background-color: $White;
+				color: $Light--red;
+				border: 2px solid $White;
+				&:hover{
+					color: $White;
+					background-color: $Light--red;
+					border-color: transparent;
+				}
+			}
+			& a:last-child{
+				border: 2px solid $White;
+				color: $White;
+				&:hover{
+				background-color: $White;
+				color: $Light--red ;
+				}
+			}
+		}
+	}
+}
